@@ -79,7 +79,7 @@ import pandas as pd
 
 # Initialize REDCap project
 api_url = "https://cphapps.temple.edu/redcap/api/"
-api_token = "REMOVED"
+api_token = os.environ["REDCAP_API_TOKEN"]
 project = Project(api_url, api_token)
 
 # Pull data for specific fields (record_id, briana_complete, margaret_complete)
@@ -106,7 +106,7 @@ import pandas as pd
 
 # Initialize REDCap project
 api_url = "https://cphapps.temple.edu/redcap/api/"
-api_token = "REMOVED"
+api_token = os.environ["REDCAP_API_TOKEN"]
 project = Project(api_url, api_token)
 
 # Pull data for specific fields (record_id, accepted_insurance_plans, medicare_population)
@@ -1352,7 +1352,7 @@ from redcap import Project
 
 # Initialize REDCap project
 api_url = "https://cphapps.temple.edu/redcap/api/"
-api_token = "REMOVED"
+api_token = os.environ["REDCAP_API_TOKEN"]
 project = Project(api_url, api_token)
 
 # Pull the data from REDCap

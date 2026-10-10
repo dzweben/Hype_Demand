@@ -1,3 +1,4 @@
+import os
 
 #%%
 # ...existing code...
@@ -7,7 +8,7 @@ import pandas as pd
 
 # Initialize REDCap project
 api_url = "https://cphapps.temple.edu/redcap/api/"
-api_token = "REMOVED"
+api_token = os.environ["REDCAP_API_TOKEN"]
 
 # Function to download REDCap report data
 def download_redcap_report(api_url, api_token, report_id):
